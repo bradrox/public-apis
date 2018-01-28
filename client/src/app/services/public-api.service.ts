@@ -2,8 +2,9 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 import { PublicApi } from '../model/api';
+import { environment } from '../../environments/environment';
 
-const SERVER = 'http://localhost';
+const SERVER = environment.serverHost + ':' + environment.serverPort;
 
 @Injectable()
 export class PublicApiService {

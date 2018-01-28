@@ -1,6 +1,8 @@
 # Public Apis
 
-A responsive Angular web application that allows the user to quickly filter a list of public APIs curated on GitHub.
+A responsive Angular web application that allows the user to quickly filter a collective list of public JSON APIs for use in web development.
+
+The application is componsed of a client and a server.
 
 ## Client
 
@@ -14,7 +16,7 @@ The server is a Node.js application that serves up content from a list of API’
 
 You can run `public-apis` within a Docker container.
 
-This project utilizes Docker to build and deploy the application. With Docker multi-stage builds, we can build both the clien and the server with [Node.js](https://nodejs.org/en/) as you would do locally, but end up with a thin and efficient image, with just the compiled code.
+This project utilizes Docker to build and deploy the application. With Docker multi-stage builds, we can build both the client and the server with [Node.js](https://nodejs.org/en/) as you would do locally, but end up with a thinner and more efficient image, with just the compiled code.
 
 Build the Docker image
 
@@ -24,4 +26,4 @@ Run the container
 
     docker run -it --rm -p 80:8080 public-apis:latest service
 
-Test out the app by navigating to <http://localhost> in your browser.
+Test out the application by navigating to <http://localhost> in your browser.

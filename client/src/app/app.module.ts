@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule, MatSortModule, fadeInContent } from '@angular/material';
+import { MatInputModule, MatSortModule, fadeInContent, MatCardModule } from '@angular/material';
 import { PublicApiService } from './services/public-api.service';
 import { SearchComponent } from './components/search/search.component';
 import { MatTableModule } from '@angular/material/table';
@@ -28,7 +28,8 @@ import { BooleanIconPipe } from './misc/boolean-icon.pipe';
     MatFormFieldModule,
     MatInputModule,
     MatTableModule,
-    MatSortModule
+    MatSortModule,
+    MatCardModule
   ],
   providers: [PublicApiService],
   bootstrap: [AppComponent]
