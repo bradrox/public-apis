@@ -6,11 +6,11 @@
   </div>
 </div>
 
-<div *ngIf="!publicApisLoaded && !load_error">
+<div *ngIf="!publicApisLoaded && !loadError">
   <mat-card> Loading APIs </mat-card>
 </div>
 
-<mat-table *ngIf="publicApisLoaded && !load_error" #table [dataSource]="dataSource" matSort>
+<mat-table *ngIf="publicApisLoaded && !loadError" #table [dataSource]="dataSource" matSort>
 
   <ng-container matColumnDef="API">
     <mat-header-cell *matHeaderCellDef mat-sort-header matSortActive="name" matSortDirection="asc"> API </mat-header-cell>
