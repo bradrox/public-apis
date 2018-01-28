@@ -1,0 +1,22 @@
+{
+  "name": "apis-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "brfs": "^1.4.3",
+    "express": "^4.16.2",
+    "fs": "0.0.1-security",
+    "request": "^2.83.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.11"
+  }
+}

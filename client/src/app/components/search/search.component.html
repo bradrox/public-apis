@@ -1,0 +1,49 @@
+<div class="search-container">
+  <div class="search-header">
+    <mat-form-field>
+      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+    </mat-form-field>
+  </div>
+</div>
+
+<mat-table #table [dataSource]="dataSource" matSort>
+
+  <ng-container matColumnDef="API">
+    <mat-header-cell *matHeaderCellDef mat-sort-header matSortActive="name" matSortDirection="asc"> API </mat-header-cell>
+    <mat-cell *matCellDef="let api">
+      <a href={{api.Link}}>{{api.API}}</a>
+    </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="Description">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Description </mat-header-cell>
+    <mat-cell *matCellDef="let api"> {{api.Description}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="Category">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Category </mat-header-cell>
+    <mat-cell *matCellDef="let api"> {{api.Category}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="Auth">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Auth </mat-header-cell>
+    <mat-cell *matCellDef="let api"> {{api.Auth}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="HTTPS">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> HTTPS </mat-header-cell>
+    <mat-cell *matCellDef="let api">
+      <mat-icon> {{api.HTTPS|booleaniconfilter}} </mat-icon>
+    </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="CORS">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> CORS </mat-header-cell>
+    <mat-cell *matCellDef="let api">
+      <mat-icon> {{api.CORS|booleaniconfilter}} </mat-icon>
+    </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
