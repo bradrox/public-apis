@@ -10,7 +10,7 @@ The [client](client/README.md) is an [Angular](https://angular.io/) application 
 
 ## Server
 
-The server is a Node.js application that serves up content from a list of API’s curated on GitHub, <https://github.com/toddmotto/public-apis>.
+The server is a Node.js application that serves up content from a [list of public JSON API’s](https://github.com/toddmotto/public-apis) curated on GitHub (courtesy of Todd Motto).
 
 ## Run with Docker
 
