@@ -1,6 +1,6 @@
 FROM node:carbon as app-build
 
-WORKDIR /app
+WORKDIR /client
 COPY ./client/ /client/
 RUN npm install 
 RUN npm run build -- --prod
@@ -17,7 +17,7 @@ RUN set -ex && \
     npm install 
 
 WORKDIR /server/static
-COPY --from=app-build /app/dist/ /server/static/
+COPY --from=app-build /client/dist/ /server/static/
 
 EXPOSE 8080
 
